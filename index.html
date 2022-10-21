@@ -8,6 +8,134 @@
     </head>
 
     <body>
+        
+        <!-- <h1 id="titleReslt"></h1>
+
+        <script>
+
+            const title = document.getElementById("titleReslt");
+
+            const num1 = Number(prompt("Número 1:"));
+            const num2 = Number(prompt("Número 2:"));
+
+            const soma = num1 + num2;
+
+            title.textContent = soma;
+            
+        </script> -->
+
+        <!-- 
+            faz um que calcula a média do aluno
+            pode ser 3 notas
+            se a media for maior que 6, ta aprovado
+            se for maior que 4, ta de recuperação
+            menor que 4 ta reprovado
+         -->
+
+        <!-- <h1 id="titleMedia"></h1>
+        <p id="resultMedia"></p>
+
+        <script>
+
+            const title = document.getElementById("titleMedia");
+            const result = document.getElementById("resultMedia");
+
+            const nota1 = Number(prompt("Nota 1:"));
+            const nota2 = Number(prompt("Nota 2:"));
+            const nota3 = Number(prompt("Nota 3:"));
+
+            const media = ((nota1 + nota2 + nota3) / 3).toFixed(1);
+
+            if(media >= 6) {
+                title.textContent = "Media: " + media;
+                result.textContent = "Aprovado"
+                result.style.color = "green";
+            }
+            else if (media >= 4) {
+                title.textContent = "Media: " + media;
+                result.textContent = "Recuperação"
+            }
+            else {
+                title.textContent = "Media: " + media;
+                result.textContent = "Reprovado"
+                result.style.color = "red";
+            }
+
+        </script> -->
+
+
+        <!-- 
+            vai ter um campo
+            o usuário vai digitar qualquer coisa
+            tem que mostrar o número de carácteres, ou seja, o número de letras que essa palavra tem
+            por exemplo
+            Diego
+            O output tem que ser: O número de carácteres é 5 
+        -->
+
+        <!-- <h1 id="titleCaractere"></h1>
+
+        <script>
+
+            const title = document.getElementById("titleCaractere");
+            
+            const name = prompt("Digite:");
+
+            const caractere = name.length;
+
+            title.textContent = "O número de carácteres é: " + caractere;
+
+        </script> -->
+
+
+
+        <!-- 
+            dois inputs
+            a pessoa pode escrever qualquer coisa
+            tem que verificar se o primeiro valor é igual ao segundo
+            se forem iguais, tem que gerar um output dizendo que são iguais, caso contrário, colocar que são diferentes 
+        -->
+
+        <!-- <h1 id="verificar"></h1> -->
+
+        <!-- <script>
+            const resultado = document.getElementById("verificar");
+
+            const value1 = prompt("Digite 1:");
+            const value2 = prompt("Digite 2:");
+
+            if(value1 === value2) {
+                resultado.textContent = "São iguais";
+            }
+            else {
+                resultado.textContent = "São diferentes";
+            }
+
+        </script> -->
+
+
+        <!-- Um homem sai da posição 15 m de uma pista de caminhada e anda até a posição 875 m mantendo uma velocidade constante de 2 m/s. Sabendo disso, determine o tempo gasto para completar a caminhada. -->
+        <!-- usa os inputs para colocar os valores na função -->
+        <!-- o resultado vc coloca na tela -->
+        <!-- S = So + vt -->
+
+        <h1 id="titleFisica"></h1>
+
+        <script>
+
+            const title = document.getElementById("titleFisica");
+
+            const s = Number(prompt("Digite um valor final s"));
+            const So = Number(prompt("Digite um valor inicial So: "));
+            const v = Number(prompt("Digite um valor velocidade v:"));
+
+            const t = (s - So) / v;
+
+            title.textContent = "O tempo gasto foi: " + t + "s";
+
+        </script>
+
     </body>
+    
 </html>
 
