@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Treinamento da Lógica</title>
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
@@ -119,7 +120,7 @@
         <!-- o resultado vc coloca na tela -->
         <!-- S = So + vt -->
 
-        <h1 id="titleFisica"></h1>
+        <!-- <h1 id="titleFisica"></h1>
 
         <script>
 
@@ -133,9 +134,45 @@
 
             title.textContent = "O tempo gasto foi: " + t + "s";
 
+        </script> -->
+
+
+        <!-- 
+            tem um projeto pra vc fazer
+            vc vai criar um modal
+            ou seja
+            quando clicar no botão, um modal tem que abrir
+            como esse da imagem
+        -->
+
+        <button id="buttonModal">Clicar aí!!</button>
+
+        <div id="modal1">
+            <div id="modal2"></div>
+        </div>
+
+        <script>
+
+            const modalMain = document.getElementById("modal1");
+            const modal = document.getElementById("modal2");
+            
+            const button = document.getElementById("buttonModal")
+
+            button.addEventListener("click", () => {
+                
+                if(modalMain) {
+                    modalMain.style.display = "flex";
+                    modal.textContent = "Ola Mundo!"
+                    console.log("Cai no if")
+                }
+                else {
+                    modalMain.style.display = "grid";
+                }
+                console.log("Cai no else");
+            })
+
         </script>
 
-    </body>
-    
+    </body> 
 </html>
 
