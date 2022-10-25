@@ -5,7 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Treinamento da Lógica</title>
+
         <link rel="stylesheet" href="style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@200&family=Lexend+Deca:wght@200;300&family=Manrope:wght@700;800&family=Montserrat:wght@500&family=Open+Sans:wght@400;700&family=Outfit:wght@700&family=Poppins:wght@600&family=Red+Hat+Display:wght@700&family=Roboto:wght@300&family=Titillium+Web&display=swap" rel="stylesheet">
+
     </head>
 
     <body>
@@ -144,33 +150,88 @@
             quando clicar no botão, um modal tem que abrir
             como esse da imagem
         -->
+        <h1 id="fieldsName"></h1>
+        <h1 id="fieldsEmail"></h1>
 
         <button id="buttonModal">Clicar aí!!</button>
 
         <div id="modal1">
             <div id="modal2"></div>
+
+            <div id="fields">
+
+                <input id="campoNome" type="text" placeholder="Digite seu nome"/>
+                <input id="campoEmail" type="email" placeholder="Digite seu email"/>
+
+            </div>
+
+            <button id="buttonClose">x</button>
+            
+            <button id="buttonRegister">Cadastrar</button>
+
         </div>
 
         <script>
 
             const modalMain = document.getElementById("modal1");
             const modal = document.getElementById("modal2");
-            
-            const button = document.getElementById("buttonModal")
+
+            const button = document.getElementById("buttonModal");
+            const close = document.getElementById("buttonClose");
+            const register = document.getElementById("buttonRegister");
+
+            const name = document.getElementById("fieldsName");
+            const email = document.getElementById("fieldsEmail");
+
+            const campoNome = document.getElementById("campoNome");
+            const campoEmail = document.getElementById("campoEmail");
+
+            // botao para abrir o modal
 
             button.addEventListener("click", () => {
+
+                if(campoNome.value == '' || campoEmail.value == '') {
+                    if(modalMain) {
+                        modalMain.style.display = "flex";
+                        modal.textContent = "Hello customer, welcome!";
+                        console.log("Cai no if");
+                    }
+                    else {
+                        modalMain.style.display = "grid";
+                    }
+                    console.log("Cai no else");
+                }
+                else{
+                    return;
+                }
                 
-                if(modalMain) {
-                    modalMain.style.display = "flex";
-                    modal.textContent = "Ola Mundo!"
-                    console.log("Cai no if")
-                }
-                else {
-                    modalMain.style.display = "grid";
-                }
-                console.log("Cai no else");
             })
 
+            // botao para fechar o modal
+
+            close.addEventListener("click", () => {
+
+                if(modalMain) {
+                    modalMain.style.display = "none";
+                   
+                }
+            })
+
+          
+            // botao para cadastrar
+          
+            register.addEventListener("click", () => {
+                if (campoNome.value == '' ||  campoEmail.value == '') {
+                    return;
+                } else { 
+                    if(modalMain) {
+                        modalMain.style.display = "none";
+                        name.textContent = campoNome.value
+                        email.textContent = campoEmail.value;   
+                    }
+                }         
+            })
+   
         </script>
 
     </body> 
